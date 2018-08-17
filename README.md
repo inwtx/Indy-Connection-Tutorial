@@ -53,7 +53,7 @@ E. Now add a required I/O handler.  An SSL handler is being used<br>
 F. Now add a socks info handler.
 </p>
 <p align="left">
- <img src="/image/Indy4.png" width="197" height="98"><br>
+ <img src="/image/Indy5.png" width="197" height="98"><br>
 <img src="/image/IdSocksInfo1.png" width="411" height="134">
 </p> 
  
