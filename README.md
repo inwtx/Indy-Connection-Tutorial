@@ -7,5 +7,5 @@ A. Create a form and find the Indy tabs on the Lazarus IDE.
 
 ![Screenshot](/image/Indy.png)
 <p align="center">
-  <img src="/image/Indy.png" width="411" height="64">
+  <img src="/image/Indy.png" width="400" height="64">
 </p>
