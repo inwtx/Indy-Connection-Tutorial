@@ -18,3 +18,9 @@ B. Add a panel with 3 radio buttons.
 <p align="left">
  <img src="/image/radiobuttons.png" width="411" height="91">
 </p>
+<p>
+ C. Add 3 radio buttons.
+ </p>
+ <p align="left">
+  <img src="/image/Indy.png" width="411" height="91">
+ </p>
