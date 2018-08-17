@@ -12,7 +12,7 @@ It will demonstrate these connections:
 A. Create a form and find the Indy tabs on the Lazarus IDE.
 </p>
 <p align="left">
-<!--  <img src="/image/Indy.png" width="533" height="85"> -->
+  <img src="/image/Indy.png" width="533" height="85">
 </p>
 <p>
 B. Add a panel with 3 radio buttons.
