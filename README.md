@@ -62,19 +62,19 @@ F. Now add a socks info hanIdNNTPObInsExpTSLdler.
  &nbsp;&nbsp;&nbsp;&nbsp;IdNNTP1 will be set for a non-SSL connection.<br>
  </p>
 <p align="left">
- <img src="/image/IdNNTPObInsNoTSL.png" width="411" height="134">
+ <img src="/image/IdNNTPObInsNoTSL.png" width="240" height="390">
 </p>
 <p>
 &nbsp;&nbsp;&nbsp;&nbsp;IdNNTP2 will be set for an Explicit TLS connection.<br>
 </p>
 <p align="left">
- <img src="/image/IdNNTPObInsExpTSL.png" width="411" height="134">
+ <img src="/image/IdNNTPObInsExpTSL.png" width="240" height="390">
 </p> 
 <p> 
-&nbsp;&nbsp;&nbsp;&nbsp;IdNNTP2 will be set for an Implicit TLS connection.<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;IdNNTP3 will be set for an Implicit TLS connection.<br> 
 </p> 
 <p align="left">
- <img src="/image/IdNNTPObInsImpTSL.png" width="411" height="134">
+ <img src="/image/IdNNTPObInsImpTSL.png" width="240" height="390">
 </p> 
  
  
