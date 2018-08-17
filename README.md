@@ -38,7 +38,7 @@ D. For our demonstration, put 3 IdNNTP components on the form.
 E. Now add a required I/O handler.
 </p>
 <p align="left">
-   <img src="/image/Indy3.png" width="411" height="134">
+   <img src="/image/Indy3.png" width="197" height="98">
  <br>
    <img src="/image/IdSSLIOHandlerSocketOpenSSL1.png" width="411" height="134">
 </p> 
