@@ -28,5 +28,5 @@ C. Find the IdNNTP component on the 'Indy Clients Protocols (nz)' tab.
 C. For our demonstration, put 3 of these on the form.
 </p>
 <p align="left">
-   <img src="/image/NNTPn.png" width="533" height="100">
+   <img src="/image/IdNNTPn.png" width="533" height="100">
 </p> 
