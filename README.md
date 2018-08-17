@@ -50,10 +50,37 @@ E. Now add a required I/O handler.  An SSL handler is being used<br>
 </p> 
 
 <p>
-F. Now add a socks info handler.
+F. Now add a socks info hanIdNNTPObInsExpTSLdler.
 </p>
 <p align="left">
  <img src="/image/Indy5.png" width="197" height="98"><br>
-<img src="/image/IdSocksInfo1.png" width="411" height="134">
+ <img src="/image/IdSocksInfo1.png" width="411" height="134">
 </p> 
+ 
+ <p>
+ F. Now to set the component parameters.<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;IdNNTP1 will be set for a non-SSL connection.<br>
+ </p>
+<p align="left">
+ <img src="/image/IdNNTPObInsNoTSL.png" width="411" height="134">
+</p>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;IdNNTP2 will be set for an Explicit TLS connection.<br>
+</p>
+<p align="left">
+ <img src="/image/IdNNTPObInsExpTSL.png" width="411" height="134">
+</p> 
+<p> 
+&nbsp;&nbsp;&nbsp;&nbsp;IdNNTP2 will be set for an Implicit TLS connection.<br> 
+</p> 
+<p align="left">
+ <img src="/image/IdNNTPObInsImpTSL.png" width="411" height="134">
+</p> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
