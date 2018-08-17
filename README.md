@@ -13,5 +13,8 @@ A. Create a form and find the Indy tabs on the Lazarus IDE.
   <img src="/image/Indy.png" width="533" height="85">
 </p>
 <p>
-B. 
+B. Add a panel with 3 radio buttons.
+</p>
+<p align="left">
+ <img src="/image/radiobuttons.png" width="617" height="137">
 </p>
