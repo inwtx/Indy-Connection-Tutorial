@@ -19,8 +19,14 @@ B. Add a panel with 3 radio buttons.
  <img src="/image/radiobuttons.png" width="411" height="91">
 </p>
 <p>
- C. Find the IdNNTP component on the 'Indy Clients Protocols (nz)' tab.
- </p>
- <p align="left">
+C. Find the IdNNTP component on the 'Indy Clients Protocols (nz)' tab.
+</p>
+<p align="left">
   <img src="/image/Indy2.png" width="533" height="100">
- </p>
+</p>
+<p>
+C. For our demonstration, put 3 of these on the form.
+</p>
+<p align="left">
+   <img src="/image/NNTPn.png" width="533" height="100">
+</p> 
