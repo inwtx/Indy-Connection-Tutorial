@@ -36,7 +36,8 @@ D. For our demonstration, put 3 IdNNTP components on the form.<br>
    <img src="/image/IdNNTPn.png" width="411" height="134">
 </p>
 <p>
-E. Now add a required I/O handler.
+E. Now add a required I/O handler.  An SSL handler is being used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;here, but it will work to connect a non SSL connection also.
 </p>
 <p align="left">
    <img src="/image/Indy3.png" width="197" height="98">
