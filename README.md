@@ -22,5 +22,5 @@ B. Add a panel with 3 radio buttons.
  C. Add 3 radio buttons.
  </p>
  <p align="left">
-  <img src="/image/Indy2.png" width="411" height="91">
+  <img src="/image/Indy2.png" width="533" height="100">
  </p>
