@@ -15,18 +15,21 @@ A. Create a form and find the Indy tabs on the Lazarus IDE.
   <img src="/image/Indy.png" width="533" height="85">
 </p>
 <p>
+ 
 B. Add a panel with 3 radio buttons and caption them accordingly.
 </p>
 <p align="left">
  <img src="/image/radiobuttons.png" width="411" height="91">
 </p>
 <p>
+ 
 C. Find the IdNNTP component on the 'Indy Clients Protocols (nz)' tab.
 </p>
 <p align="left">
   <img src="/image/Indy2.png" width="197" height="98">
 </p> 
 <p>
+ 
 D. For our demonstration, put 3 IdNNTP components on the form.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;(This is going to allow both no SSL and use SSL.  It is easier<br>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to use 3 IdNNTP components, rather than trying to switch<br>
@@ -36,6 +39,7 @@ D. For our demonstration, put 3 IdNNTP components on the form.<br>
    <img src="/image/IdNNTPn.png" width="411" height="134">
 </p>
 <p>
+ 
 E. Now add a required I/O handler.  An SSL handler is being used<br>
 &nbsp;&nbsp;&nbsp;&nbsp;here, but it will work to connect a non SSL connection also.
 </p>
@@ -44,3 +48,12 @@ E. Now add a required I/O handler.  An SSL handler is being used<br>
  <br>
    <img src="/image/IdSSLIOHandlerSocketOpenSSL1.png" width="411" height="134">
 </p> 
+
+<p>
+F. Now add a socks info handler.
+</p>
+<p align="left">
+ <img src="/image/Indy4.png" width="197" height="98"><br>
+<img src="/image/IdSSLIOHandlerSocketOpenSSL1.png" width="411" height="134">
+</p> 
+ 
