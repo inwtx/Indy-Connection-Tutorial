@@ -28,7 +28,7 @@ C. Find the IdNNTP component on the 'Indy Clients Protocols (nz)' tab.
 </p> 
 <p>
 D. For our demonstration, put 3 IdNNTP components on the form.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(If you are going to allow both no SSL and use SSL, it is<br>  
+&nbsp;&nbsp;&nbsp;&nbsp;(This is going to allow both no SSL and use SSL.  It is<br>  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;easier to use 3 IdNNTP components, rather than trying to<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch 1 IdNNTP component between each connection type.)
 </p>
