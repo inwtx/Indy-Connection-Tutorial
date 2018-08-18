@@ -227,7 +227,7 @@ begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     Disconnect1.Enabled := False;<br>
 end;<br>
 <br>
-//UseTOR1 checkbox OnChange event<br>
+//UseTOR1 checkbox OnClick event<br>
 procedure TForm1.UseTOR1Click(Sender: TObject);<br>
 begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     if UseTOR1.Checked = True then<br>
