@@ -233,7 +233,7 @@ begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;<br>
 end;<br>
 <br>
-end.<br><br>
+end.<br>
 
  
  
