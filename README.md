@@ -230,9 +230,9 @@ end;<br>
 procedure TForm1.UseTOR1Click(Sender: TObject);<br>
 begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     if UseTOR1.Checked = True then<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;<br>
 end;<br>
 <br>
 end.<br>
