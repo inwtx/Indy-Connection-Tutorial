@@ -65,6 +65,18 @@ F. Now add a socks info hanIdNNTPObInsExpTSLdler.
 </p> 
 <br> 
 
+<p>
+G. Now add 2 buttons and a check box.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1. Change the top button caption to Connect and name to Connect1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. Change the bottom button caption to Disconnect and name to Disconnect1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. Change the checkbox caption to Tor name to UseTor1<br>
+</p>
+<p align="left">
+ <img src="/image/buttons.png" width="411" height="134">
+</p> 
+
+<hr>
+
 <i><b>Component Parameters Setup</b></i>
 <br><br>
 <b>IdNNTP Components</b><br>
