@@ -81,12 +81,14 @@ It will demonstrate these connections:
 <p align="left">
  <img src="/image/IdNNTPObInsNoTSL.png" width="240" height="390">
 </p>
+<br>
 <p>
 <b>B. IdNNTP2 will be set for an Explicit TLS connection.</b><br>
 </p>
 <p align="left">
  <img src="/image/IdNNTPObInsExpTSL.png" width="240" height="390">
 </p> 
+<br>
 <p> 
 <b>C. IdNNTP3 will be set for an Implicit TLS connection.</b><br> 
 </p> 
@@ -102,7 +104,13 @@ It will demonstrate these connections:
 <p>
  <img src="/image/IdSSLIOHandlerSocketOpenSSL1OI.png" width="240" height="660"> 
 </p>
- 
+<br> 
+<p> 
+<b>IdSocksInfo1 Component</b><br>
+</p>
+<p>
+ <img src="/image/IdSocksInfo1OI.png" width="240" height="370"> 
+</p> 
  
  
  
