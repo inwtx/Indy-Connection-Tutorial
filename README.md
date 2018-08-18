@@ -129,7 +129,6 @@ uses<br>
 &nbsp;&nbsp;&nbsp;&nbsp;    IdNNTP, IdIOHandlerStack, IdSSLOpenSSL, IdSocks;<br>
 <br>
 type<br>
-
 { TForm1 }<br>
 <br>
 TForm1 = class(TForm)<br>
