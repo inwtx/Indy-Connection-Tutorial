@@ -65,7 +65,7 @@ It will demonstrate these connections:
 <b>F. Now add 2 buttons and a check box.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. Change the top button caption to Connect and name to Connect1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;2. Change the bottom button caption to Disconnect and name to Disconnect1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;3. Change the checkbox caption to Tor name to UseTor1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. Change the checkbox caption to 'Use Tor' and name to UseTor1<br>
 </p>
 <p align="left">
  <img src="/image/buttons.png" width="411" height="134">
@@ -132,7 +132,7 @@ uses<br>
 &nbsp;&nbsp;&nbsp;&nbsp;    ComCtrls, StrUtils;<br>
 <br>
 type<br>
-<br>
+
 { TForm1 }<br>
 <br>
 TForm1 = class(TForm)<br>
