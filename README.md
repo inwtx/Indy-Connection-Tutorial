@@ -13,14 +13,14 @@ It will demonstrate these connections:
 </p>
 
 <p>
-A. Create a form and find the Indy tabs on the Lazarus IDE.
+<b>A. Create a form and find the Indy tabs on the Lazarus IDE.</b>
 </p>
 <p align="left">
   <img src="/image/Indy.png" width="533" height="85">
 </p>
 
 <p>
-B. Add a panel with 3 radiobuttons and caption them as shown.<br>
+<b>B. Add a panel with 3 radiobuttons and caption them as shown.<br></b>
 &nbsp;&nbsp;&nbsp;&nbsp;Rename the top radiobutton to NoTLS1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Rename the middle radiobutton to Explicit119TLS1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Rename the bottom radiobutton to Implicit563TLS1<br>
@@ -30,7 +30,7 @@ B. Add a panel with 3 radiobuttons and caption them as shown.<br>
 </p>
 <p>
  
-C. For our demonstration, add 3 IdNNTP components on the form.<br>
+<b>C. For our demonstration, add 3 IdNNTP components on the form.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(This is going to allow both no SSL and use SSL. It is easier<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to use 3 IdNNTP components, rather than trying to switch<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 IdNNTP component between each connection type.)
@@ -41,8 +41,8 @@ C. For our demonstration, add 3 IdNNTP components on the form.<br>
 </p>
 <p>
  
-D. Now add a required I/O handler.  An SSL handler is being used<br>
-&nbsp;&nbsp;&nbsp;&nbsp;here, but it will work to connect a non SSL connection also.
+<b>D. Now add a required I/O handler.  An SSL handler is being used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;here, but it will work to connect a non SSL connection also.</b>
 </p>
 <p align="left">
    <img src="/image/Indy3.png" width="197" height="98">
@@ -51,16 +51,15 @@ D. Now add a required I/O handler.  An SSL handler is being used<br>
 </p> 
 
 <p>
-E. Now add a socks info hanIdNNTPObInsExpTSLdler.
+<b>E. Now add a socks info hanIdNNTPObInsExpTSLdler.</b>
 </p>
 <p align="left">
  <img src="/image/Indy5.png" width="197" height="98"><br>
  <img src="/image/IdSocksInfo1.png" width="411" height="134">
 </p> 
-<br> 
 
 <p>
-F. Now add 2 buttons and a check box.<br>
+<b>F. Now add 2 buttons and a check box.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. Change the top button caption to Connect and name to Connect1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;2. Change the bottom button caption to Disconnect and name to Disconnect1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;3. Change the checkbox caption to Tor name to UseTor1<br>
@@ -77,19 +76,19 @@ F. Now add 2 buttons and a check box.<br>
 (No need to expand and change anything in the IOHandler property)
 <br>
 <p>
-A. IdNNTP1 will be set for a non-SSL connection.<br>
+<b>A. IdNNTP1 will be set for a non-SSL connection.</b><br>
  </p>
 <p align="left">
  <img src="/image/IdNNTPObInsNoTSL.png" width="240" height="390">
 </p>
 <p>
-B. IdNNTP2 will be set for an Explicit TLS connection.<br>
+<b>B. IdNNTP2 will be set for an Explicit TLS connection.</b><br>
 </p>
 <p align="left">
  <img src="/image/IdNNTPObInsExpTSL.png" width="240" height="390">
 </p> 
 <p> 
-C. IdNNTP3 will be set for an Implicit TLS connection.<br> 
+<b>C. IdNNTP3 will be set for an Implicit TLS connection.</b><br> 
 </p> 
 <p align="left">
  <img src="/image/IdNNTPObInsImpTSL.png" width="240" height="390">
