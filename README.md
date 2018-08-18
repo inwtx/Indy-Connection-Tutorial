@@ -92,7 +92,7 @@ C. IdNNTP3 will be set for an Implicit TLS connection.<br>
 &nbsp;&nbsp;sslvTLSv1_2).
 </p>
 <p>
- <img src="/image/IdSSLIOHandlerSocketOpenSSL1OI.png" width="240" height="390"> 
+ <img src="/image/IdSSLIOHandlerSocketOpenSSL1OI.png" width="240" height="660"> 
 </p>
  
  
