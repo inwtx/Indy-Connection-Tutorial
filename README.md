@@ -4,10 +4,10 @@ This tutorial concerns setting up a connecton to a server using the Indy compone
 It was created due to the lack of examples on the web as to how to effectively do this.<br>
 It will use an example to connection to an NNTP server.  The IDE used is from CodeTyphon.
 
-It will demonstrate these connections:<br>  
+It will demonstrate these connections (The 144.76.182.167 host being used is a free NNTP server.):  
  utNoTLSSupport (no SSL secure connection)<br>
  utUseExplicitTLS and utUseImplicitTLS (both types of SSL secure connection).<br>
- (The 144.76.182.167 host being used is a free NNTP server.)
+ 
 
 <hr>
 
