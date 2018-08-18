@@ -62,7 +62,7 @@ It will demonstrate these connections:
 </p> 
 <br>
 <p>
-<b>F. Finally, add 2 buttons and a check box.</b><br>
+<b>F. Lastly, add 2 buttons and a check box.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. Change the top button caption to Connect and name to Connect1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;2. Change the bottom button caption to Disconnect and name to Disconnect1<br>
 &nbsp;&nbsp;&nbsp;&nbsp;3. Change the checkbox caption to 'Use Tor' and name to UseTor1<br>
