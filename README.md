@@ -18,7 +18,7 @@ It will demonstrate these connections:
 <p align="left">
   <img src="/image/Indy.png" width="533" height="85">
 </p>
-
+<br>
 <p>
 <b>B. Add a panel with 3 radiobuttons and caption them as shown.<br></b>
 &nbsp;&nbsp;&nbsp;&nbsp;Rename the top radiobutton to NoTLS1<br>
@@ -28,8 +28,8 @@ It will demonstrate these connections:
 <p align="left">
  <img src="/image/radiobuttons.png" width="411" height="91">
 </p>
+<br>
 <p>
- 
 <b>C. For our demonstration, add 3 IdNNTP components on the form.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;(This is going to allow both no SSL and use SSL. It is easier<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to use 3 IdNNTP components, rather than trying to switch<br>
@@ -39,8 +39,8 @@ It will demonstrate these connections:
  <img src="/image/Indy2.png" width="197" height="98"><br>
  <img src="/image/IdNNTPn.png" width="411" height="134">
 </p>
+<br>
 <p>
- 
 <b>D. Now add a required I/O handler.  An SSL handler is being used<br>
 &nbsp;&nbsp;&nbsp;&nbsp;here, but it will work to connect a non SSL connection also.</b>
 </p>
@@ -49,7 +49,7 @@ It will demonstrate these connections:
  <br>
    <img src="/image/IdSSLIOHandlerSocketOpenSSL1.png" width="411" height="134">
 </p> 
-
+<br>
 <p>
 <b>E. Now add a socks info hanIdNNTPObInsExpTSLdler.</b>
 </p>
@@ -57,7 +57,7 @@ It will demonstrate these connections:
  <img src="/image/Indy5.png" width="197" height="98"><br>
  <img src="/image/IdSocksInfo1.png" width="411" height="134">
 </p> 
-
+<br>
 <p>
 <b>F. Now add 2 buttons and a check box.</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. Change the top button caption to Connect and name to Connect1<br>
