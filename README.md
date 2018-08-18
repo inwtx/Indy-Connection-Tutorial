@@ -125,9 +125,8 @@ unit Unit1;<br>
 interface<br>
 <br>
 uses<br>
-&nbsp;&nbsp;&nbsp;&nbsp;    Windows, Classes, SysUtils, FileUtil, IdNNTP, IdIOHandlerStack, IdSSLOpenSSL,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;    IdSocks, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons, ExtCtrls,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;    ComCtrls, StrUtils;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    Windows, Forms, Dialogs, StdCtrls, Buttons, ExtCtrls, Classes, SysUtils,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;    IdNNTP, IdIOHandlerStack, IdSSLOpenSSL, IdSocks;<br>
 <br>
 type<br>
 
