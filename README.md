@@ -1,7 +1,6 @@
 # Indy-Connection-Tutorial
 
 This tutorial concerns setting up a connecton to a server using Indy components.<br>
-It was created due to the lack of examples on the web as to how to effectively do this.<br>
 It will use an example that connects to an NNTP server.  The IDE used is from CodeTyphon.<br>
 (The 144.76.182.167 host being used is a free NNTP server.)
 
