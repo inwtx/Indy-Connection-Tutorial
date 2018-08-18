@@ -54,7 +54,7 @@ It will demonstrate these connections:
 </p> 
 <br>
 <p>
-<b>E. Now add a socks info hanIdNNTPObInsExpTSLdler.</b>
+<b>E. Now add a socks info hanler IdSocksInfo1.</b>
 </p>
 <p align="left">
  <img src="/image/Indy5.png" width="197" height="98"><br>
