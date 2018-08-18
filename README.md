@@ -18,9 +18,12 @@ A. Create a form and find the Indy tabs on the Lazarus IDE.
 <p align="left">
   <img src="/image/Indy.png" width="533" height="85">
 </p>
+
 <p>
- 
-B. Add a panel with 3 radio buttons and caption them accordingly.
+B. Add a panel with 3 radiobuttons and caption them as shown.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Rename the top radiobutton to NoTLS1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Rename the middle radiobutton to Explicit119TLS1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Rename the bottom radiobutton to Implicit563TLS1<br>
 </p>
 <p align="left">
  <img src="/image/radiobuttons.png" width="411" height="91">
