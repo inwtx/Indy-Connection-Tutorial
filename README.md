@@ -156,7 +156,7 @@ TForm1 = class(TForm)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     procedure Disconnect1Click(Sender: TObject);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     procedure IdNNTP1Connected(Sender: TObject);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     procedure IdNNTP1Disconnected(Sender: TObject);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     procedure UseTOR1Change(Sender: TObject);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     procedure UseTOR1Click(Sender: TObject);<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;     private<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     { private declarations }<br>
@@ -228,7 +228,7 @@ begin<br>
 end;<br>
 <br>
 //UseTOR1 checkbox OnChange event<br>
-procedure TForm1.UseTOR1Change(Sender: TObject);<br>
+procedure TForm1.UseTOR1Click(Sender: TObject);<br>
 begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     if UseTOR1.Checked = True then<br>
 &nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1<br>
