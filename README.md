@@ -35,8 +35,8 @@ C. Find the IdNNTP component on the 'Indy Clients Protocols (nz)' tab.
 <p>
  
 D. For our demonstration, put 3 IdNNTP components on the form.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;(This is going to allow both no SSL and use SSL.  It is easier<br>  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to use 3 IdNNTP components, rather than trying to switch<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(This is going to allow both no SSL and use SSL.  It is easier
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to use 3 IdNNTP components, rather than trying to switch
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 IdNNTP component between each connection type.)
 </p>
 <p align="left">
@@ -64,8 +64,9 @@ F. Now add a socks info hanIdNNTPObInsExpTSLdler.
 
 <i><b>Component Parameters Setup</b></i>
 <br><br>
-IdNNTP Components
- <br>
+IdNNTP Components<br>
+(No need to expand and change anything in the IOHandler property)
+<br>
 <p>
 A. IdNNTP1 will be set for a non-SSL connection.<br>
  </p>
