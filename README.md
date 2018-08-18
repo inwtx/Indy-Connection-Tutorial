@@ -5,8 +5,8 @@ It will use an example that connects to an NNTP server.  The IDE used is from Co
 (The 144.76.182.167 host being used is a free NNTP server.)
 
 It will demonstrate these connections:  
- utNoTLSSupport (no SSL secure connection)<br>
- utUseExplicitTLS and utUseImplicitTLS (both types of SSL secure connection).<br>
+ <b>utNoTLSSupport</b> (no SSL secure connection)<br>
+ <b>utUseExplicitTLS</b> and <b>utUseImplicitTLS</b> (both types of SSL secure connection).<br>
 
 <hr>
 
