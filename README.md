@@ -76,8 +76,6 @@ It will demonstrate these connections:
 <i><b>Component Parameters Setup</b></i>
 <br><br>
 <b>IdNNTP Components</b><br>
-(No need to expand and change anything in the IOHandler property)
-<br>
 <p>
 <b>A. IdNNTP1 will be set for a non-SSL connection.</b><br>
  </p>
