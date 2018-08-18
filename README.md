@@ -184,55 +184,55 @@ begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           IdNNTP_No := IdNNTP2<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           else<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           if Implicit563TLS1.Checked = True then // Port 563 Use Implicit TLS<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              IdNNTP_No := IdNNTP3<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              else begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              ShowMessage('Connection button not pressed!');<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              EXIT;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              end;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              IdNNTP_No := IdNNTP3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              else begin<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              ShowMessage('Connection button not pressed!');<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              EXIT;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              end;<br>
 <br>
-     try<br>
-       IdNNTP_No.Connect;<br>
-     except<br>
-       on E: Exception do begin<br>
-             if pos('10061', E.Message) > 0 then<br>
-                ShowMessage('Server down, no internet connection, or TOR may not be running!')<br>
-                else<br>
-                ShowMessage(E.Message);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     try<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       IdNNTP_No.Connect;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     except<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       on E: Exception do begin<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             if pos('10061', E.Message) > 0 then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                ShowMessage('Server down, no internet connection, or TOR may not be running!')<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                ShowMessage(E.Message);<br>
 <br>
-             Disconnect1.Enabled := False;<br>
-             end;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             Disconnect1.Enabled := False;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;             end;<br>
      end;<br>
 end;<br>
 <br>
 //IdNNTP1, IdNNTP2, and IdNNTP3 OnConnected event<br>
 procedure TForm1.IdNNTP1Connected(Sender: TObject);<br>
 begin<br>
-     Connect1.Enabled := False;<br>
-     UseTOR1.Enabled := False;<br>
-     Disconnect1.Enabled := True;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Connect1.Enabled := False;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     UseTOR1.Enabled := False;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Disconnect1.Enabled := True;<br>
 end;<br>
 <br>
 //Disconnect button<br>
 procedure TForm1.Disconnect1Click(Sender: TObject);<br>
 begin<br>
-     IdNNTP_No.Disconnect;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP_No.Disconnect;<br>
 end;<br>
 <br>
 //IdNNTP1, IdNNTP2, and IdNNTP3 OnDisconnected event<br>
 procedure TForm1.IdNNTP1Disconnected(Sender: TObject);<br>
 begin<br>
-     Connect1.Enabled := True;<br>
-     UseTOR1.Enabled := True;<br>
-     Disconnect1.Enabled := False;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Connect1.Enabled := True;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     UseTOR1.Enabled := True;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Disconnect1.Enabled := False;<br>
 end;<br>
 <br>
 //UseTOR1 checkbox OnChange event<br>
 procedure TForm1.UseTOR1Change(Sender: TObject);<br>
 begin<br>
-     if UseTOR1.Checked = True then<br>
-        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1<br>
-        else<br>
-        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     if UseTOR1.Checked = True then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;<br>
 end;<br>
 <br>
 end.<br>
