@@ -7,9 +7,9 @@ It will use an example that connects to an NNTP server.  The IDE used is from Co
 It will demonstrate these connections:<br>
  <b>utNoTLSSupport</b> &nbsp;(no SSL secure connection)<br>
  <b>utUseExplicitTLS</b> &nbsp;(A client first establishes an unsecured connection to a server and then<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  issues a specific command to that server to establish an SSL link.)<br>
- <b>utUseImplicitTLS</b> &nbsp;(A mechanism whereby security is automatically turned on as soon as a client<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  makes a connection to a server.).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  issues a specific command to that server to establish an SSL link.)<br>
+ <b>utUseImplicitTLS</b> &nbsp;(A mechanism whereby security is automatically turned on as soon as a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  client makes a connection to a server.).<br>
 
 <hr>
 
