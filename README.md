@@ -102,8 +102,8 @@ It will demonstrate these connections:<br>
 <br> 
 <p> 
 <b>IdSSLIOHandlerSocketOpenSSL1 Component</b><br>
-(Only need to expand the SSLOptions area and change the Method to<br>
-&nbsp;&nbsp;sslvTLSv1_2).
+(Only need to expand the SSLOptions area and<br>
+&nbsp;&nbsp;change the Method to sslvTLSv1_2).
 </p>
 <p>
  <img src="/image/IdSSLIOHandlerSocketOpenSSL1OI.png" width="240" height="660"> 
@@ -111,8 +111,8 @@ It will demonstrate these connections:<br>
 <br> 
 <p> 
 <b>IdSocksInfo1 Component</b><br>
-Set the Host to 127.0.0.1, Port to 9050, and Version to svSocks5<br>
-for use with Tor (Tor must be started externally).<br>
+Set the Host to 127.0.0.1, Port to 9050, and Version to<br>
+svSocks5 for use with Tor (Tor must be started externally).<br>
 </p>
 <p>
  <img src="/image/IdSocksInfo1OI.png" width="240" height="370"> 
