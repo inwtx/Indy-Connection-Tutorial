@@ -111,7 +111,7 @@ It will demonstrate these connections:<br>
 <br> 
 <p> 
 <b>IdSocksInfo1 Component</b><br>
-Set the Host to 127.0.0.1, Port to 9050, and Vesion to svSocks5<br>
+Set the Host to 127.0.0.1, Port to 9050, and Version to svSocks5<br>
 for use with Tor (Tor must be started externally).<br>
 </p>
 <p>
