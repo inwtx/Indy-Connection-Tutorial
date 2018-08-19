@@ -103,7 +103,7 @@ It will demonstrate these connections:<br>
 <p> 
 <b>IdSSLIOHandlerSocketOpenSSL1 Component</b><br>
 (Only need to expand the SSLOptions area and<br>
-&nbsp;&nbsp;change the Method to sslvTLSv1_2).
+&nbsp;change the Method to sslvTLSv1_2).
 </p>
 <p>
  <img src="/image/IdSSLIOHandlerSocketOpenSSL1OI.png" width="240" height="660"> 
