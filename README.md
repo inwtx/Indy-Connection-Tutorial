@@ -190,7 +190,8 @@ begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              end;<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;     try<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       IdNNTP_No.Connect;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       if not IdNNTP_No.Connected then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       IdNNTP_No.Connect;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;     except<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       on E: Exception do begin<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             if pos('10061', E.Message) > 0 then<br>
@@ -214,7 +215,8 @@ end;<br>
 //Disconnect button<br>
 procedure TForm1.Disconnect1Click(Sender: TObject);<br>
 begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP_No.Disconnect;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     if IdNNTP_No.Connected then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP_No.Disconnect;<br>
 end;<br>
 <br>
 //IdNNTP1, IdNNTP2, and IdNNTP3 OnDisconnected event<br>
