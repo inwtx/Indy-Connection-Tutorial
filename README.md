@@ -4,9 +4,12 @@ This tutorial concerns setting up a connecton to a server using Indy components.
 It will use an example that connects to an NNTP server.  The IDE used is from CodeTyphon.<br>
 (The 144.76.182.167 host being used is a free NNTP server.)
 
-It will demonstrate these connections:  
+It will demonstrate these connections:<br>  
  <b>utNoTLSSupport</b> (no SSL secure connection)<br>
- <b>utUseExplicitTLS</b> and <b>utUseImplicitTLS</b> (both types of SSL secure connection).<br>
+ <b>utUseExplicitTLS</b> (A client first establishes an unsecured connection to a server and then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  issues a specific command to that server to establish an SSL link.)<br>
+ <b>utUseImplicitTLS</b> (A mechanism whereby security is automatically turned on as soon as a client<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  makes a connection to a server.).<br>
 
 <hr>
 
