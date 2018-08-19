@@ -46,9 +46,10 @@ It will demonstrate these connections:<br>
 </p>
 <br>
 <p>
- <b>D. Now add a required I/O handler.</b><br>
- &nbsp;&nbsp;&nbsp;&nbsp;An SSL handler is being used here, but it will work to connect a non SSL connection also.</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;(For non SSL only, a TIdIOHandlerStack can be used.)<br> 
+<b>D. Now add a required I/O handler.</b><br>
+&nbsp;&nbsp;&nbsp;&nbsp;An SSL handler is being used here, but it will work to connect<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(For non SSL only, a TIdIOHandlerStack can be used.) a non<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SSL connection also.<br> 
 </p>
 <p align="left">
    <img src="/image/Indy3.png" width="197" height="98">
