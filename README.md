@@ -122,123 +122,124 @@ svSocks5 for use with Tor (Tor must be started externally).<br>
 <hr>
 
 <i><b>Code</b></i><br><br>
-unit Unit1;<br>
-<br>
-{$mode objfpc}{$H+}<br>
-<br>
-interface<br>
-<br>
-uses<br>
-&nbsp;&nbsp;&nbsp;&nbsp;    Windows, Forms, Dialogs, StdCtrls, Buttons, ExtCtrls, Classes, SysUtils,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;    IdNNTP, IdIOHandlerStack, IdSSLOpenSSL, IdSocks;<br>
-<br>
-type<br>
-{ TForm1 }<br>
-<br>
-TForm1 = class(TForm)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Connect1: TButton;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     ConnectionPanel1: TPanel;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Disconnect1: TButton;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Explicit119TLS1: TRadioButton;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdIOHandlerStack1: TIdIOHandlerStack;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP1: TIdNNTP;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP2: TIdNNTP;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP3: TIdNNTP;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdSocksInfo1: TIdSocksInfo;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     IdSSLIOHandlerSocketOpenSSL1: TIdSSLIOHandlerSocketOpenSSL;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Implicit563TLS1: TRadioButton;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Label1: TLabel;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     NoTLS1: TRadioButton;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     UseTOR1: TCheckBox;<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     procedure Connect1Click(Sender: TObject);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     procedure Disconnect1Click(Sender: TObject);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     procedure IdNNTP1Connected(Sender: TObject);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     procedure IdNNTP1Disconnected(Sender: TObject);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     procedure UseTOR1Click(Sender: TObject);<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     private<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     { private declarations }<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     public<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     { public declarations }<br>
-end;<br>
-<br>
-var<br>
-Form1: TForm1;<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;       IdNNTP_No: TIdNNTP;<br>
-<br>
-implementation<br>
-<br>
-{$R *.lfm}<br>
-<br>
-{ TForm1 }<br>
-<br>
-//Connect button<br>
-procedure TForm1.Connect1Click(Sender: TObject);<br>
-begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     if NoTLS1.Checked = True then // Port 119 No TLS Support<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        IdNNTP_No := IdNNTP1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        if Explicit119TLS1.Checked = True then // Port 119 Use Explicit TLS<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           IdNNTP_No := IdNNTP2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           if Implicit563TLS1.Checked = True then // Port 563 Use Implicit TLS<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              IdNNTP_No := IdNNTP3<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              else begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              ShowMessage('Connection button not pressed!');<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              EXIT;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              end;<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     try<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       if not IdNNTP_No.Connected then<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       IdNNTP_No.Connect;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     except<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       on E: Exception do begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             if pos('10061', E.Message) > 0 then<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                ShowMessage('Server down, no internet connection, or TOR may not be running!')<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                ShowMessage(E.Message);<br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             Disconnect1.Enabled := False;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             end;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     end;<br>
-end;<br>
-<br>
-//IdNNTP1, IdNNTP2, and IdNNTP3 OnConnected event<br>
-procedure TForm1.IdNNTP1Connected(Sender: TObject);<br>
-begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Connect1.Enabled := False;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     UseTOR1.Enabled := False;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Disconnect1.Enabled := True;<br>
-end;<br>
-<br>
-//Disconnect button<br>
-procedure TForm1.Disconnect1Click(Sender: TObject);<br>
-begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     if IdNNTP_No.Connected then<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     IdNNTP_No.Disconnect;<br>
-end;<br>
-<br>
-//IdNNTP1, IdNNTP2, and IdNNTP3 OnDisconnected event<br>
-procedure TForm1.IdNNTP1Disconnected(Sender: TObject);<br>
-begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Connect1.Enabled := True;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     UseTOR1.Enabled := True;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     Disconnect1.Enabled := False;<br>
-end;<br>
-<br>
-//UseTOR1 checkbox OnClick event<br>
-procedure TForm1.UseTOR1Click(Sender: TObject);<br>
-begin<br>
-&nbsp;&nbsp;&nbsp;&nbsp;     if UseTOR1.Checked = True then<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;<br>
-end;<br>
-<br>
-end.<br>
+```
+unit Unit1;
 
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+    Windows, Forms, Dialogs, StdCtrls, Buttons, ExtCtrls, Classes, SysUtils,
+    IdNNTP, IdIOHandlerStack, IdSSLOpenSSL, IdSocks;
+
+type
+{ TForm1 }
+
+TForm1 = class(TForm)
+     Connect1: TButton;
+     ConnectionPanel1: TPanel;
+     Disconnect1: TButton;
+     Explicit119TLS1: TRadioButton;
+     IdIOHandlerStack1: TIdIOHandlerStack;
+     IdNNTP1: TIdNNTP;
+     IdNNTP2: TIdNNTP;
+     IdNNTP3: TIdNNTP;
+     IdSocksInfo1: TIdSocksInfo;
+     IdSSLIOHandlerSocketOpenSSL1: TIdSSLIOHandlerSocketOpenSSL;
+     Implicit563TLS1: TRadioButton;
+     Label1: TLabel;
+     NoTLS1: TRadioButton;
+     UseTOR1: TCheckBox;
+
+     procedure Connect1Click(Sender: TObject);
+     procedure Disconnect1Click(Sender: TObject);
+     procedure IdNNTP1Connected(Sender: TObject);
+     procedure IdNNTP1Disconnected(Sender: TObject);
+     procedure UseTOR1Click(Sender: TObject);
+
+     private
+     { private declarations }
+     public
+     { public declarations }
+end;
+
+var
+Form1: TForm1;
+
+       IdNNTP_No: TIdNNTP;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+//Connect button
+procedure TForm1.Connect1Click(Sender: TObject);
+begin
+     if NoTLS1.Checked = True then // Port 119 No TLS Support
+        IdNNTP_No := IdNNTP1
+        else
+        if Explicit119TLS1.Checked = True then // Port 119 Use Explicit TLS
+           IdNNTP_No := IdNNTP2
+           else
+           if Implicit563TLS1.Checked = True then // Port 563 Use Implicit TLS
+              IdNNTP_No := IdNNTP3
+              else begin
+              ShowMessage('Connection button not pressed!');
+              EXIT;
+              end;
+
+     try
+       if not IdNNTP_No.Connected then
+       IdNNTP_No.Connect;
+     except
+       on E: Exception do begin
+             if pos('10061', E.Message) > 0 then
+                ShowMessage('Server down, no internet connection, or TOR may not be running!')
+                else
+                ShowMessage(E.Message);
+
+             Disconnect1.Enabled := False;
+             end;
+     end;
+end;
+
+//IdNNTP1, IdNNTP2, and IdNNTP3 OnConnected event
+procedure TForm1.IdNNTP1Connected(Sender: TObject);
+begin
+     Connect1.Enabled := False;
+     UseTOR1.Enabled := False;
+     Disconnect1.Enabled := True;
+end;
+
+//Disconnect button
+procedure TForm1.Disconnect1Click(Sender: TObject);
+begin
+     if IdNNTP_No.Connected then
+     IdNNTP_No.Disconnect;
+end;
+
+//IdNNTP1, IdNNTP2, and IdNNTP3 OnDisconnected event
+procedure TForm1.IdNNTP1Disconnected(Sender: TObject);
+begin
+     Connect1.Enabled := True;
+     UseTOR1.Enabled := True;
+     Disconnect1.Enabled := False;
+end;
+
+//UseTOR1 checkbox OnClick event
+procedure TForm1.UseTOR1Click(Sender: TObject);
+begin
+     if UseTOR1.Checked = True then
+        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := IdSocksInfo1
+        else
+        IdSSLIOHandlerSocketOpenSSL1.TransparentProxy := nil;
+end;
+
+end.
+```
  
  
 
