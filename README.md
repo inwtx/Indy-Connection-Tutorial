@@ -18,7 +18,7 @@ It will demonstrate these connections:<br>
 </p>
 
 <p>
-<b>A. Create a form and find the Indy tabs on the Lazarus IDE.</b>
+<b>A. Create a form and find the Indy tabs on the Lazarus (or CodeTyphon) IDE.</b>
 </p>
 <p align="left">
   <img src="/image/Indy.png" width="533" height="85">
@@ -193,7 +193,7 @@ begin
 
      try
        if not IdNNTP_No.Connected then
-       IdNNTP_No.Connect;
+          IdNNTP_No.Connect;
      except
        on E: Exception do begin
              if pos('10061', E.Message) > 0 then
